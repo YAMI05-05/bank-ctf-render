@@ -9,7 +9,7 @@ RUN apt-get update && \
 COPY audit.php /var/www/html/
 
 # Add flag
-RUN echo "softwarica{render_4_free_c0mm4nd_1nj3ct10n}" > /fl4g
+RUN echo "softwarica{rc0mm4nd_1nj3ct10n_1s_st1ll_vuln3rabl3}" > /fl4g
 RUN chmod 644 /fl4g
 
 # Security: non-root
