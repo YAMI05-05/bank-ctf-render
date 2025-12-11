@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['host'])) {
 
 $host = $_POST['host'];
 
-// Hard filter (500-point)
 $blocked_chars = [';', '&', '|', '(', ')', '{', '}', '[', ']', '"', '\'', '\\', ' ', "\t", "\n", "\r", '/'];
 $blocked_words = ['cat', 'flag', 'softwarica', 'root', 'etc', 'passwd', 'bash', 'sh', 'wget', 'nc'];
 
@@ -23,9 +22,8 @@ foreach ($blocked_words as $w) {
     }
 }
 
-// VULNERABLE: command injection via backticks
 shell_exec("ping -c 1 " . escapeshellarg($host) . " 2>&1");
 
 echo "<h3>✅ Diagnostic completed.</h3>";
-echo "<p><a href='https://your-frontend.vercel.app/it-portal.html'>← Back</a></p>";
+echo "<p><a href='https://frontend-ggs05ncbu-netanixs-projects.vercel.app/it-portal.html'>← Back</a></p>";
 ?>
