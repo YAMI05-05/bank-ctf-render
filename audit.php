@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['host'])) {
 
 $host = $_POST['host'];
 
-$blocked_chars = [';', '&', '|', '(', ')', '{', '}', '[', ']', '"', '\'', '\\', ' ', "\t", "\n", "\r", '/'];
+$blocked_chars = [';', '&', '|', '(', ')', '{', '}', '[', ']', '"', '\'', '\\', ' ', "\t", "\n", "\r"];
 $blocked_words = ['cat', 'flag', 'softwarica', 'root', 'etc', 'passwd', 'bash', 'sh', 'wget', 'nc'];
 
 foreach ($blocked_chars as $c) {
