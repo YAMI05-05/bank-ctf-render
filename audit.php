@@ -1,4 +1,5 @@
 <?php
+set_time_limit(30);
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_POST['host'])) {
     http_response_code(400);
     die("Direct access not allowed.");
